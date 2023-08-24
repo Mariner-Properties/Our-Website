@@ -26,6 +26,11 @@
     color: white;
   }
 
+.center{
+    padding-left: 200px;
+    padding-right: 400px;
+}
+
 .form-container .field-container:first-of-type {
     grid-area: name;
 }
