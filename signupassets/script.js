@@ -1,0 +1,5 @@
+
+
+function redirect() {
+    location.reload();
+  }
