@@ -84,6 +84,10 @@ input {
     width: 60px;
 }
 
+"Website Title"{
+    text-align: center;
+}
+
 body-text{
     padding: 15px;
 }
@@ -96,9 +100,3 @@ body-text{
 .center2 {
     text-align: center;
   }
-
-.Photo {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 33.3333%;
-}
