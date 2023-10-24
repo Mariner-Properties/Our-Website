@@ -22,7 +22,7 @@
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #044faa;
+    background-color: #39e9be;
     color: white;
   }
 
@@ -51,17 +51,6 @@
     position: relative;
 }
 
-.form-container {
-    display: grid;
-    grid-column-gap: 10px;
-    grid-template-columns: auto auto;
-    grid-template-rows: 90px 90px 90px;
-    grid-template-areas: "name name""number number""expiration security";
-    max-width: 400px;
-    padding: 20px;
-    color: #707070;
-}
-
 label {
     padding-bottom: 5px;
     font-size: 13px;
@@ -84,21 +73,31 @@ input {
     width: 60px;
 }
 
-body-text{
-    padding: 15px;
-}
-
 .center {
   text-align: center;
-  border: 3px solid #044faa;
+  border: 3px solid #39e9be;
 }
 
 .center2 {
     text-align: center;
   }
 
-.Photo {
-    display: flex;
-    flex-wrap: wrap;
-    flex-basis: 33.3333%;
+.grid-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-row-end: 3;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+
+.grid-container-2 {
+    position: absolute;
+    left: -699px;
+    top: 750px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-row-end: 3;
+    column-gap: 10px;
+    row-gap: 10px;
+    scale: 40%;
 }

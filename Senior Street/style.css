@@ -22,7 +22,7 @@
   
   /* Add a color to the active/current link */
   .topnav a.active {
-    background-color: #044faa;
+    background-color: #39e9be;
     color: white;
   }
 
@@ -84,15 +84,60 @@ input {
     width: 60px;
 }
 
+.photos {
+    max-width: 100%;
+    height: auto;
+    display: inline-grid;
+    column-gap: 50px;
+    row-gap: 50px;
+    grid-template-columns: 50px;
+}
+
+.col1 {
+    width: 33%;
+}
+
+.col2 {
+    width: 33%;
+}
+
+.col3 {
+    width: 33%;
+}
+
 body-text{
     padding: 15px;
 }
 
 .center {
   text-align: center;
-  border: 3px solid #044faa;
+  border: 3px solid #39e9be;
 }
 
 .center2 {
     text-align: center;
   }
+
+  .grid-container {
+    position: absolute;
+    left: -700px;
+    top: -500px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-row-end: 3;
+    column-gap: 10px;
+    row-gap: 10px;
+    scale: 40%;
+}
+
+.grid-container-2 {
+    position: absolute;
+    left: -699px;
+    top: 750px;
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    grid-row-end: 3;
+    column-gap: 10px;
+    row-gap: 10px;
+    scale: 40%;
+}
