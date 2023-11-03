@@ -19,44 +19,73 @@
     <a href="../Senior Street/senior.html">Senior Street</a>
     <a href="../aboutassets/about.html">About</a>
   </div>
-</body>
 
 <header>
   <h1>4 Richardson Street:</h1>
 </header>
 
-<body>
-  <p>
-    GREAT HOUSE & GREAT LOCATION LESS THAN A BLOCK TO COLLEGE AVE. YOU'VE GOT TO SEE THIS!
+<div>
+<img src="./richardsonphotos/Front.jpg" alt="">
+</div>
 
-    This house has 5 bedrooms and accommodating up to 8 residents. This house is within one block to College Avenue and
-    the College Ave. Gym, Alexander Library, Brower Commons, Campus Bus Stops, Chabad House, etc. The house features off
-    street parking for multiple cars and a detached garage included, backyard deck, enclosed front porch, washer & dryer
-    in basement, dishwasher, newer refrigerator, etc. The house has 3 doubles and 2 singles each, as well as 2 baths,
-    (or could be 5 singles) living room, kitchen, unfinished basement, etc.
-    Contact: John 732-261-6503 - Anytime Email: john.gillooly@irr.com
-  </p>
-</body>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'home')">Overview</button>
+  <button class="tablinks" onclick="openCity(event, 'menu1')">Facts and Features</button>
+  <button class="tablinks" onclick="openCity(event, 'menu2')">Map</button>
+  <button class="tablinks" onclick="openCity(event, 'menu3')">Photos</button>
+  <button class="tablinks" onclick="openCity(event, 'menu4')">Contact</button>
+</div>
 
-<div class="grid-container">
-  <div class="grid-item">
-    <img src="./richardsonphotos/Front.jpg" alt="">
+<div id="home" class="tabcontent">
+    <p>This page contains information on the house residing on 4 Richardson Street.</p>
   </div>
-  <div class="grid-item">
-    <img src="./richardsonphotos/Front 2.jpg" alt="">
+
+<div id="menu1" class="tabcontent">
+    <p>5 bedrooms (Layout of 3 doubles and 2 singles)
+      2 baths
+      Maximum 8 Residents
+      Off-Street Parking
+      Detached Garage
+      Backyard deck
+      Enclosed front porch
+      washer and dryer
+      dishwasher
+    </p>
   </div>
-  <div class="grid-item">
-    <img src="./richardsonphotos/BR 1.jpg" alt="">
+
+  <div id="menu2" class="tabcontent">
+    <p>WIP</p>
   </div>
-  <div class="grid-item">
-    <img src="./richardsonphotos/BR 2.jpg" alt="">
+
+  <div id="menu3" class="tabcontent">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="./richardsonphotos/Front.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img src="./richardsonphotos/Front 2.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img src="./richardsonphotos/BR 1.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img src="./richardsonphotos/BR 2.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img src="./richardsonphotos/BR 3.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img src="./richardsonphotos/BR 4.jpg" alt="">
+      </div>
+    </div>
   </div>
-  <div class="grid-item">
-    <img src="./richardsonphotos/BR 3.jpg" alt="">
-  </div>
-  <div class="grid-item">
-    <img src="./richardsonphotos/BR 4.jpg" alt="">
+
+  <div id="menu4" class="tabcontent">
+    <p>732-261-6503 Ask for John - Email: john.gillooly@irr.com anytime</p>
   </div>
 </div>
 
+</body>
+
+<script src="./script.js"></script>
 </html>
