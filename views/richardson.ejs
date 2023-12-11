@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <title>Mariner Properties</title>
+</head>
+
+<%- include("./partials/navbar.ejs") %>
+
+<header>
+  <h1>4 Richardson Street:</h1>
+</header>
+
+<div class="splash">
+<img class="splash" src="/assets/richardsonphotos/Front.jpg" alt="">
+</div>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'home')">Overview</button>
+  <button class="tablinks" onclick="openCity(event, 'menu1')">Facts and Features</button>
+  <button class="tablinks" onclick="openCity(event, 'menu2')">Map</button>
+  <button class="tablinks" onclick="openCity(event, 'menu3')">Photos</button>
+  <button class="tablinks" onclick="openCity(event, 'menu4')">Contact</button>
+</div>
+
+<div id="home" class="tabcontent">
+    <p>This page contains information on the house residing on 4 Richardson Street.</p>
+  </div>
+
+<div id="menu1" class="tabcontent">
+    <p>5 bedrooms (Layout of 3 doubles and 2 singles)
+      2 baths <br>
+      Maximum 8 Residents <br>
+      Off-Street Parking <br>
+      Detached Garage <br>
+      Backyard deck <br>
+      Enclosed front porch <br>
+      Washer and dryer <br>
+      Dishwasher <br>
+    </p>
+  </div>
+
+  <div id="menu2" class="tabcontent">
+    <p>WIP</p>
+  </div>
+
+  <div id="menu3" class="tabcontent">
+    <div class="grid-container">
+      <div class="grid-item">
+        <img class="grid-resize" src="/assets/richardsonphotos/Front.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img class="grid-resize" src="/assets/richardsonphotos/Front 2.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img class="grid-resize" src="/assets/richardsonphotos/BR 1.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img class="grid-resize" src="/assets/richardsonphotos/BR 2.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img class="grid-resize" src="/assets/richardsonphotos/BR 3.jpg" alt="">
+      </div>
+      <div class="grid-item">
+        <img class="grid-resize" src="/assets/richardsonphotos/BR 4.jpg" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div id="menu4" class="tabcontent">
+    <p>732-261-6503 Ask for John - Email: john.gillooly@irr.com anytime</p>
+  </div>
+</div>
+
+</body>
+
+<script src="/assets/js/script.js"></script>
+</html>

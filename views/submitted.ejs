@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Mariner Properties</title>
+  </head>
+  <body>  
+    <%- include("./partials/navbar.ejs") %>
+    <h1>Tickets</h1>
+    <ul>
+        <% tickets.forEach(ticket => { %>
+            <li>
+                <strong>Title:</strong> <%= ticket.title %><br>
+                <strong>Property:</strong> <%= ticket.property %><br>
+                <strong>Problem Description:</strong> <%= ticket.problemDescription %><br>
+                <strong>Date Noticed:</strong> <%= ticket.dateNoticed %><br>
+                <strong>Today's Date:</strong> <%= ticket.todaysDate %><br>
+            </li>
+        <% }) %>
+    </ul>
+          </body>
+          </html>

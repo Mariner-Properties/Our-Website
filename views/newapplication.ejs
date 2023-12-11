@@ -1,0 +1,139 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" /> 
+    <title>Applications</title>
+</head>
+<%- include("./partials/navbar.ejs") %>
+<body>
+  <h1>Applications For Rental (Fill Out One For Each member of Your Group):</h1>
+
+  <form action="/applications" method="post">
+    <!-- Add input fields for all the properties in your Application model -->
+    <label for="addressOfProperty">Address of Property You Want to Rent:</label>
+    <input type="text" id="addressOfProperty" name="addressOfProperty" required>
+    <h1>Personal Information:</h1>
+    <label for="yourName">Your Name:</label>
+    <input type="text" id="yourName" name="yourName" required>
+    <label for="socialSecurityNumber">SS#</label>
+    <input type="text" id="socialSecurityNumber" name="socialSecurityNumber" required>
+    <label for="birthDate">Birth Date:</label>
+    <input type="date" id="birthDate" name="birthDate" required>
+    <label for="presentAddress">Present Address:</label>
+    <input type="text" id="presentAddress" name="presentAddress" required>
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required>
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required>
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" required>
+    <label for="phone">Phone Number:</label>
+    <input type="text" id="phone" name="phone" required>
+    <label for="email">Email Address:</label>
+    <input type="text" id="email" name="email" required>
+    <h1>Permanent Address:</h1>
+    <label for="permanentAddress">Address:</label>
+    <input type="text" id="permanentAddress" name="permanentAddress" required>
+    <label for="permCity">City:</label>
+    <input type="text" id="permCity" name="permCity" required>
+    <label for="permState">State:</label>
+    <input type="text" id="permState" name="permState" required>
+    <label for="permZip">ZIP:</label>
+    <input type="text" id="permZip" name="permZip" required>
+    <label for="permPhone">Phone:</label>
+    <input type="text" id="permPhone" name="permPhone" required>
+    <h1>Parent/Guardian Information:</h1>
+    <label for="parentGuardianName">Name:</label>
+    <input type="text" id="parentGuardianName" name="parentGuardianName" required>
+    <label for="parentAddress">Address:</label>
+    <input type="text" id="parentAddress" name="parentAddress" required>
+    <label for="parentCity">City:</label>
+    <input type="text" id="parentCity" name="parentCity" required>
+    <label for="parentState">State:</label>
+    <input type="text" id="parentState" name="parentState" required>
+    <label for="parentZip">ZIP:</label>
+    <input type="text" id="parentZip" name="parentZip" required>
+    <label for="parentPhone">Phone:</label>
+    <input type="text" id="parentPhone" name="parentPhone" required>
+    <label for="previousTenant">Are You A Previous Tenant:</label>
+    <input type="text" id="previousTenant" name="previousTenant" required>
+    <label for="previousRentAmount">Rent Amount:</label>
+    <input type="text" id="previousRentAmount" name="previousRentAmount" required>
+    <label for="landlordPreceptorName">Landlord/Preceptor's Name:</label>
+    <input type="text" id="landlordPreceptorName" name="landlordPreceptorName" required>
+    <label for="previousCity">Previous City:</label>
+    <input type="text" id="previousCity" name="previousCity" required>
+    <label for="previousState">Previous State:</label>
+    <input type="text" id="previousState" name="previousState" required>
+    <label for="previousZip">Previous ZIP:</label>
+    <input type="text" id="previousZip" name="previousZip" required>
+    <label for="previousPhone">Previous Phone:</label>
+    <input type="text" id="previousPhone" name="previousPhone" required>
+    <h1>Source of Funds for Rent:</h1>
+    <label for="sourceOfFunds">Source:</label>
+    <input type="text" id="sourceOfFunds" name="sourceOfFunds" required>
+    <label for="employerName">Employer Name (If Job):</label>
+    <input type="text" id="employerName" name="employerName" required>
+    <label for="sourceCity">City:</label>
+    <input type="text" id="sourceCity" name="sourceCity" required>
+    <label for="sourceState">State:</label>
+    <input type="text" id="sourceState" name="sourceState" required>
+    <label for="sourceZip">ZIP:</label>
+    <input type="text" id="sourceZip" name="sourceZip" required>
+    <label for="sourcePhone">Phone:</label>
+    <input type="text" id="sourcePhone" name="sourcePhone" required>
+    <h1>Credit References:</h1>
+    <label for="bankName">Bank Name:</label>
+    <input type="text" id="bankName" name="bankName" required>
+    <label for="bankCity">City:</label>
+    <input type="text" id="bankCity" name="bankCity" required>
+    <label for="accountNumber">Account Number:</label>
+    <input type="text" id="accountNumber" name="accountNumber" required>
+    <label for="averageBalance">Average Balance:</label>
+    <input type="text" id="averageBalance" name="averageBalance" required>
+    <label for="creditCardName">Credit Card Name:</label>
+    <input type="text" id="creditCardName" name="creditCardName" required>
+    <label for="creditCardAverageBalance">Average Balance:</label>
+    <input type="text" id="creditCardAverageBalance" name="creditCardAverageBalance" required>
+    <h1>Character/Personal References(NOT friend, significant other, classmate):</h1>
+    <label for="referenceOneName">Reference One Name:</label>
+    <input type="text" id="referenceOneName" name="referenceOneName" required>
+    <label for="referenceOneRelation">Relation:</label>
+    <input type="text" id="referenceOneRelation" name="referenceOneRelation" required>
+    <label for="referenceOneYears">Years Known:</label>
+    <input type="text" id="referenceOneYears" name="referenceOneYears" required>
+    <label for="referenceOneCity">City:</label>
+    <input type="text" id="referenceOneCity" name="referenceOneCity" required>
+    <label for="referenceOnePhoneNumber">Phone:</label>
+    <input type="text" id="referenceOnePhoneNumber" name="referenceOnePhoneNumber" required>
+    <label for="referenceTwoName">Reference Two Name:</label>
+    <input type="text" id="referenceTwoName" name="referenceTwoName" required>
+    <label for="referenceTwoRelation">Relation:</label>
+    <input type="text" id="referenceTwoRelation" name="referenceTwoRelation" required>
+    <label for="referenceTwoYears">Years Known:</label>
+    <input type="text" id="referenceTwoYears" name="referenceTwoYears" required>
+    <label for="referenceTwoCity">City:</label>
+    <input type="text" id="referenceTwoCity" name="referenceTwoCity" required>
+    <label for="referenceTwoPhoneNumber">Phone:</label>
+    <input type="text" id="referenceTwoPhoneNumber" name="referenceTwoPhoneNumber" required>
+    <label for="referenceThreeName">Reference Three Name:</label>
+    <input type="text" id="referenceThreeName" name="referenceThreeName" required>
+    <label for="referenceThreeRelation">Relation:</label>
+    <input type="text" id="referenceThreeRelation" name="referenceThreeRelation" required>
+    <label for="referenceThreeYears">Years Known:</label>
+    <input type="text" id="referenceThreeYears" name="referenceThreeYears" required>
+    <label for="referenceThreeCity">City:</label>
+    <input type="text" id="referenceThreeCity" name="referenceThreeCity" required>
+    <label for="referenceThreePhoneNumber">Phone:</label>
+    <input type="text" id="referenceThreePhoneNumber" name="referenceThreePhoneNumber" required><br><br>
+    <label for="signature">Signature:</label>
+    <input for="signature" id="signature" name="signature" required>
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+
+
+    <button type="submit">Submit Application</button>
+  </form>
+</body>
+</html>

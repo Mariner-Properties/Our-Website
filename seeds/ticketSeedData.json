@@ -1,0 +1,10 @@
+[
+    {
+        "id": "1",
+        "title": "example",
+        "property": "123 street road",
+        "problemDescription": "leak in pipes in xyz place",
+        "dateNoticed": "1/1/1",
+        "todaysDate": "12/6/2023"
+    }
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Mariner Properties</title>
+  </head>
+
+  <%- include("partials/navbar.ejs") %>
+
+        <body>
+          <h1>Submit New Ticket</h1>
+
+          <form action="/submit-ticket" method="post">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+        
+            <label for="property">Property:</label>
+            <input type="text" id="property" name="property" required>
+        
+            <label for="problemDescription">Problem Description:</label>
+            <textarea id="problemDescription" name="problemDescription" rows="4" required></textarea>
+        
+            <label for="dateNoticed">Date Noticed:</label>
+            <input type="date" id="dateNoticed" name="dateNoticed" required>
+        
+            <label for="todaysDate">Today's Date:</label>
+            <input type="date" id="todaysDate" name="todaysDate" required>
+        
+            <button type="submit">Submit Ticket</button>
+        </form>
+  </body>
+
+</html>
