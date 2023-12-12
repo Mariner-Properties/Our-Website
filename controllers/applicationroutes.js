@@ -4,7 +4,6 @@ const { Application } = require('../models/application');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const { Sequelize, sequelize } = require('sequelize');
-const { sequelize } = require('./connection');
 const staticroutes = require('./staticroutes');
 
 const transporter = nodemailer.createTransport({
