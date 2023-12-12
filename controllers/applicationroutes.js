@@ -128,9 +128,9 @@ router.get('/new-application', (req, res) => {
         // Redirect to a success page or do something else
         res.redirect('/about');
     } catch (error) {
-        // Handle errors (e.g., render an error page)
-        res.status(500)
-    }
+        console.error('Error creating application:', error);
+        res.status(500).json({ error: 'Internal server error' });
+      }
   });
   
   // Update an existing application
