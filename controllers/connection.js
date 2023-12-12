@@ -5,8 +5,11 @@ let sequelize;
 let sequelize2;
 
 if (process.env.JAWSDB_URL) {
+  // If JAWSDB_URL is available, use it for both sequelize and sequelize2
   sequelize = new Sequelize(process.env.JAWSDB_URL);
+  sequelize2 = new Sequelize(process.env.JAWSDB_URL);
 } else {
+  // If JAWSDB_URL is not available, use local configurations for sequelize and sequelize2
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -17,11 +20,7 @@ if (process.env.JAWSDB_URL) {
       port: 3306
     }
   );
-}
 
-if (process.env.JAWSDB_URL) {
-  sequelize2 = new Sequelize(process.env.JAWSDB_URL);
-} else {
   sequelize2 = new Sequelize(
     process.env.DB_NAME_2,
     process.env.DB_USER,
