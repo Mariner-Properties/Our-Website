@@ -16,7 +16,7 @@ const transporter = nodemailer.createTransport({
   });
 
 router.get('/new-application', (req, res) => {
-    res.render('newApplication');
+    res.render('newapplication');
   });
 
   // Get a specific application by ID
