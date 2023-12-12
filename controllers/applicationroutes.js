@@ -5,7 +5,7 @@ const router = express.Router();
 const nodemailer = require('nodemailer');
 const { Sequelize, sequelize } = require('sequelize');
 const { sequelize2 } = require('./connection');
-const staticroutes = require('./staticroutes');
+const staticroutes = require('./staticroutes')
 
 router.get('/new-application', (req, res) => {
     res.render('newApplication');
