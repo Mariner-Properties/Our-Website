@@ -1,5 +1,5 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize2 = new Sequelize({
+const sequelize = new Sequelize({
     dialect: 'mysql',
     host: process.env.DB_HOST,
     username: process.env.DB_USER,
@@ -7,7 +7,7 @@ const sequelize2 = new Sequelize({
     database: process.env.DB_DATABASE_2,
   });
 
-const Application = sequelize2.define('Application', {
+const Application = sequelize.define('Application', {
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -81,7 +81,7 @@ const Application = sequelize2.define('Application', {
   tableName: 'Applications',
 });
 
-sequelize2.sync()
+sequelize.sync()
   .then(() => {
     console.log('Database synchronized.');
   })

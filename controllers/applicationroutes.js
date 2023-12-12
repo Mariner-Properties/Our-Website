@@ -4,7 +4,7 @@ const { Application } = require('../models/application');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const { Sequelize, sequelize } = require('sequelize');
-const { sequelize2 } = require('./connection');
+const { sequelize } = require('./connection');
 const staticroutes = require('./staticroutes');
 
 const transporter = nodemailer.createTransport({
@@ -39,7 +39,7 @@ router.get('/new-application', (req, res) => {
     const newApplicationData = req.body;
     try {
       const newApplication = await Application.create(newApplicationData, {
-        sequelize: sequelize2, // Use the second Sequelize instance
+        sequelize: sequelize, // Use the second Sequelize instance
       });
     
     // Send email to a series of email addresses
