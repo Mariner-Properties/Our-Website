@@ -43,7 +43,7 @@ router.get('/new-application', (req, res) => {
       });
     
     // Send email to a series of email addresses
-    const emailAddresses = ['', 'rpgillooly@gmail.com']; // Add your email addresses
+    const emailAddresses = ['john.gillooly@irr.com', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
     const text = `A new Application has been submitted:
     <h1>Property</h1>
