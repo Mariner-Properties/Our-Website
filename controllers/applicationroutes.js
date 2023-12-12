@@ -48,74 +48,75 @@ router.get('/new-application', (req, res) => {
     const text = `A new Application has been submitted:
     <h1>Property</h1>
     <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>\n
-    <h1>Their Info</h1>  
-    <p>Your Name: ${newApplication.yourName}\n
-      Social Security Number: ${newApplication.socialSecurityNumber}\n
+    <h1>Their Info</h1>\n
+    <p>Your Name: ${newApplication.yourName},
+      Social Security Number: ${newApplication.socialSecurityNumber},
       Birth Date: ${newApplication.birthDate}</p>\n
       <h1>Present Address</h1>\n
-      <p>Present Address ${newApplication.presentAddress}\n
-      City: ${newApplication.city}\n
-      State ${newApplication.state}\n
-      ZIP: ${newApplication.zip}\n
-      Phone: ${newApplication.phone}\n
-      Email: ${newApplication.email}\n
+      <p>Present Address ${newApplication.presentAddress},
+      City: ${newApplication.city},
+      State ${newApplication.state},
+      ZIP: ${newApplication.zip},
+      Phone: ${newApplication.phone},
+      Email: ${newApplication.email},
       City: ${newApplication.presCity}</p>\n
       <h1>Permanent Address</h1>
-      <p>Permanent Address: ${newApplication.permanentAddress}\n
-      City: ${newApplication.permCity}\n
-      State: ${newApplication.permState}\n
-      ZIP: ${newApplication.permZip}\n
+      <p>Permanent Address: ${newApplication.permanentAddress},
+      City: ${newApplication.permCity},
+      State: ${newApplication.permState},
+      ZIP: ${newApplication.permZip},
       Phone: ${newApplication.permPhone}</p>\n
       <h1>Parent/Guardian Info</h1>
-      <p>Parent/Guardian Name: ${newApplication.parentGuardianName}\n
-      Address: ${newApplication.parentAddress}\n
-      City: ${newApplication.parentCity}\n
-      State: ${newApplication.parentState}\n
-      ZIP: ${newApplication.parentZip}\n
+      <p>Parent/Guardian Name: ${newApplication.parentGuardianName},
+      Address: ${newApplication.parentAddress},
+      City: ${newApplication.parentCity},
+      State: ${newApplication.parentState},
+      ZIP: ${newApplication.parentZip},
       Phone: ${newApplication.parentPhone}</p>\n
       <h1>Preivous Tenancy</h1>
-      <p>Previous Tenant: ${newApplication.previousTenant}\n
-      Previous Rent Amount: ${newApplication.previousRentAmount}\n
-      Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName}\n
-      City: ${newApplication.previousCity}\n
-      State: ${newApplication.previousState}\n
-      ZIP: ${newApplication.previousZip}\n
+      <p>Previous Tenant: ${newApplication.previousTenant},
+      Previous Rent Amount: ${newApplication.previousRentAmount},
+      Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName},
+      City: ${newApplication.previousCity},
+      State: ${newApplication.previousState},
+      ZIP: ${newApplication.previousZip},
       Phone: ${newApplication.previousPhone}</p>\n
       <h1>Source of Funds</h1>
-      <p>Source Of Funds: ${newApplication.sourceOfFunds}\n
-      Employer Name: ${newApplication.employerName}\n
-      Source City: ${newApplication.sourceCity}\n
-      Source State: ${newApplication.sourceState}\n
-      Source ZIP: ${newApplication.sourceZip}\n
+      <p>Source Of Funds: ${newApplication.sourceOfFunds},
+      Employer Name: ${newApplication.employerName},
+      Source City: ${newApplication.sourceCity},
+      Source State: ${newApplication.sourceState},
+      Source ZIP: ${newApplication.sourceZip},
       Source Phone: ${newApplication.sourcePhone}</p>\n
       <h1>Credit Info</h1>
-      <p>Bank Name: ${newApplication.bankName}\n
-      Bank City: ${newApplication.bankCity}\n
-      Bank State: ${newApplication.bankState}\n
-      Account Number: ${newApplication.accountNumber}\n
-      Average Balance: ${newApplication.averageBalance}\n
-      Credit Card Name: ${newApplication.creditCardName}\n
+      <p>Bank Name: ${newApplication.bankName},
+      Bank City: ${newApplication.bankCity},
+      Bank State: ${newApplication.bankState},
+      Account Number: ${newApplication.accountNumber},
+      Average Balance: ${newApplication.averageBalance},
+      Credit Card Name: ${newApplication.creditCardName},
       Credit Card Average Balance: ${newApplication.creditCardAverageBalance}</p>\n
       <h1>Personal References</h1>
       <p>Reference One
-      Name: ${newApplication.referenceOneName}\n
-      Relation: ${newApplication.referenceOneRelation}\n
-      Years Known: ${newApplication.referenceOneYears}\n
-      City: ${newApplication.referenceOneCity}\n
+      Name: ${newApplication.referenceOneName},
+      Relation: ${newApplication.referenceOneRelation},
+      Years Known: ${newApplication.referenceOneYears},
+      City: ${newApplication.referenceOneCity},
       Phone: ${newApplication.referenceOnePhoneNumber}</p>\n
       <p>Reference Two
-      Name: ${newApplication.referenceTwoName}\n
-      Relation: ${newApplication.referenceTwoRelation}\n
-      Years Known: ${newApplication.referenceTwoYears}\n
-      City: ${newApplication.referenceTwpCity}\n
+      Name: ${newApplication.referenceTwoName},
+      Relation: ${newApplication.referenceTwoRelation},
+      Years Known: ${newApplication.referenceTwoYears},
+      City: ${newApplication.referenceTwpCity},
       Phone: ${newApplication.referenceTwpPhoneNumber}</p>\n
       <p>Reference Three
-      Name: ${newApplication.referenceThreeName}\n
-      Relation: ${newApplication.referenceThreeRelation}\n
-      Years Known: ${newApplication.referenceThreeYears}\n
-      City: ${newApplication.referenceThreeCity}\n
-      Phone: ${newApplication.referenceThreePhoneNumber}\n
-      Signature: ${newApplication.signature}\n
+      Name: ${newApplication.referenceThreeName},
+      Relation: ${newApplication.referenceThreeRelation},
+      Years Known: ${newApplication.referenceThreeYears},
+      City: ${newApplication.referenceThreeCity},
+      Phone: ${newApplication.referenceThreePhoneNumber}</p>\n
+      <h1>Signature and Date:</h1>
+      <p>Signature: ${newApplication.signature},
       Date: ${newApplication.date}</p>\n
       `;
 
