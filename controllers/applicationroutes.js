@@ -43,72 +43,71 @@ router.get('/new-application', (req, res) => {
       });
     
     // Send email to a series of email addresses
-    const emailAddresses = ['john.gillooly@irr.com', 'rpgillooly@gmail.com']; // Add your email addresses
+    const emailAddresses = ['', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
     const text = `A new Application has been submitted:
     <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>
       <p>Your Name: ${newApplication.yourName}
       Social Security Number: ${newApplication.socialSecurityNumber}
       Birth Date: ${newApplication.birthDate}</p>\n
-      <p>Present Address ${newApplication.presentAddress}</p>
-      City: ${newApplication.city}</p>
-      State ${newApplication.state}\n
+      <p>Present Address ${newApplication.presentAddress}
+      City: ${newApplication.city}
+      State ${newApplication.state}
       ZIP: ${newApplication.zip}
       Phone: ${newApplication.phone}
-      Email: ${newApplication.email}\n
-      Present Address: ${newApplication.presentAddress}
-      City: ${newApplication.presCity}
-      Permanent Address: ${newApplication.permanentAddress}\n
+      Email: ${newApplication.email}
+      City: ${newApplication.presCity}</p>\n
+      <p>Permanent Address: ${newApplication.permanentAddress}
       City: ${newApplication.permCity}
       State: ${newApplication.permState}\n
       ZIP: ${newApplication.permZip}
-      Phone: ${newApplication.permPhone}
-      Parent/Guardian Name: ${newApplication.parentGuardianName}\n
+      Phone: ${newApplication.permPhone}</p>\n
+      <p>Parent/Guardian Name: ${newApplication.parentGuardianName}
       Address: ${newApplication.parentAddress}
       City: ${newApplication.parentCity}
-      State: ${newApplication.parentState}\n
+      State: ${newApplication.parentState}
       ZIP: ${newApplication.parentZip}
-      Phone: ${newApplication.parentPhone}
-      Previous Tenant: ${newApplication.previousTenant}\n
+      Phone: ${newApplication.parentPhone}</p>\n
+      <p>Previous Tenant: ${newApplication.previousTenant}
       Previous Rent Amount: ${newApplication.previousRentAmount}
       Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName}
-      City: ${newApplication.previousCity}\n
+      City: ${newApplication.previousCity}
       State: ${newApplication.previousState}
       ZIP: ${newApplication.previousZip}
-      Phone: ${newApplication.previousPhone}\n
-      Source Of Funds: ${newApplication.sourceOfFunds}
+      Phone: ${newApplication.previousPhone}</p>\n
+      <p>Source Of Funds: ${newApplication.sourceOfFunds}
       Employer Name: ${newApplication.employerName}
-      Source City: ${newApplication.sourceCity}\n
+      Source City: ${newApplication.sourceCity}
       Source State: ${newApplication.sourceState}
       Source ZIP: ${newApplication.sourceZip}
-      Source Phone: ${newApplication.sourcePhone}\n
-      Bank Name: ${newApplication.bankName}
+      Source Phone: ${newApplication.sourcePhone}</p>\n
+      <p>Bank Name: ${newApplication.bankName}
       Bank City: ${newApplication.bankCity}
-      Bank State: ${newApplication.bankState}\n
+      Bank State: ${newApplication.bankState}
       Account Number: ${newApplication.accountNumber}
       Average Balance: ${newApplication.averageBalance}
       Credit Card Name: ${newApplication.creditCardName}
-      Credit Card Average Balance: ${newApplication.creditCardAverageBalance}\n
-      Reference One
+      Credit Card Average Balance: ${newApplication.creditCardAverageBalance}</p>\n
+      <p>Reference One
       Name: ${newApplication.referenceOneName}
       Relation: ${newApplication.referenceOneRelation}
       Years Known: ${newApplication.referenceOneYears}
       City: ${newApplication.referenceOneCity}
-      Phone: ${newApplication.referenceOnePhoneNumber}\n
-      Reference Two
+      Phone: ${newApplication.referenceOnePhoneNumber}</p>\n
+      <p>Reference Two
       Name: ${newApplication.referenceTwoName}
       Relation: ${newApplication.referenceTwoRelation}
       Years Known: ${newApplication.referenceTwoYears}
       City: ${newApplication.referenceTwpCity}
-      Phone: ${newApplication.referenceTwpPhoneNumber}\n
-      Reference Three
+      Phone: ${newApplication.referenceTwpPhoneNumber}</p>\n
+      <p>Reference Three
       Name: ${newApplication.referenceThreeName}
       Relation: ${newApplication.referenceThreeRelation}
       Years Known: ${newApplication.referenceThreeYears}
       City: ${newApplication.referenceThreeCity}
       Phone: ${newApplication.referenceThreePhoneNumber}
       Signature: ${newApplication.signature}
-      Date: ${newApplication.date}
+      Date: ${newApplication.date}</p>\n
       `;
 
     for (const emailAddress of emailAddresses) {
