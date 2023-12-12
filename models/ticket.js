@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const Sequelize = require('sequelize');
 const ticketsDB = new Sequelize('tickets_db', 'nm4x7xm9burykoj3', 'sdajfdghkxhl1kmf', {
   host: 'en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   dialect: 'mysql',
