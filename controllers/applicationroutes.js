@@ -4,15 +4,8 @@ const { Application } = require('../models/application');
 const router = express.Router();
 const nodemailer = require('nodemailer');
 const { Sequelize, sequelize } = require('sequelize');
+const { sequelize2 } = require('./connection');
 const staticroutes = require('./staticroutes');
-
-const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'rpgillooly@gmail.com',
-      pass: process.env.EMAIL_PASSWORD,
-    },
-  });
 
 router.get('/new-application', (req, res) => {
     res.render('newApplication');
@@ -38,7 +31,7 @@ router.get('/new-application', (req, res) => {
     const newApplicationData = req.body;
     try {
       const newApplication = await Application.create(newApplicationData, {
-        sequelize: sequelize, // Use the second Sequelize instance
+        sequelize: sequelize2, // Use the second Sequelize instance
       });
     
     // Send email to a series of email addresses
@@ -128,9 +121,7 @@ router.get('/new-application', (req, res) => {
         res.redirect('/about');
     } catch (error) {
         // Handle errors (e.g., render an error page)
-        console.error('Error creating application:', error);
-        res.status(500).send('Internal server error'); // Set an appropriate error message
-        // Or, if you want to redirect, use res.redirect('/error-page');
+        res.status(500)
     }
   });
   

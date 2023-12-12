@@ -1,10 +1,7 @@
 const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize({
+const ticketsDB = new Sequelize('tickets_db', 'nm4x7xm9burykoj3', 'sdajfdghkxhl1kmf', {
+  host: 'en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
   dialect: 'mysql',
-  host: process.env.DB_HOST,
-  username: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_DATABASE,
 });
 
 const Ticket = sequelize.define('Ticket', {
