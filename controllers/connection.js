@@ -4,12 +4,20 @@ const Sequelize = require('sequelize');
 let sequelize;
 
 if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize(process.env.JAWSDB_URL);
+  // Use JAWSDB URL if available
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dialect: 'mysql', // or your database dialect
+    logging: false, // Disable logging SQL queries (optional)
+  });
 } else {
-  console.error('JAWSDB_URL is not set in environment variables');
-  // Handle the error or exit the application
+  // Provide explicit values for host, username, password, and database
+  sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASSWORD, {
+    host: process.env.DB_HOST,
+    dialect: 'mysql', // or your database dialect
+    logging: false, // Disable logging SQL queries (optional)
+  });
 }
 
 module.exports = {
-  sequelize: sequelize
+  sequelize: sequelize,
 };
