@@ -19,12 +19,12 @@ const Ticket = sequelize.define('Ticket', {
   tableName: 'tickets',
 });
 
-sequelize.sync()
+ticketsDB.sync()
   .then(() => {
-    console.log('Database synchronized.');
+    console.log('tickets_db synchronized');
   })
   .catch((error) => {
-    console.error('Error synchronizing the database:', error);
+    console.error('Error synchronizing tickets_db:', error);
   });
-
+  
 module.exports = { Ticket };

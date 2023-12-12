@@ -78,12 +78,12 @@ const Application = sequelize.define('Application', {
   tableName: 'Applications',
 });
 
-sequelize.sync()
+applicationsDB.sync()
   .then(() => {
-    console.log('Database synchronized.');
+    console.log('applications_db synchronized');
   })
   .catch((error) => {
-    console.error('Error synchronizing the database:', error);
+    console.error('Error synchronizing applications_db:', error);
   });
 
   module.exports = { Application };
