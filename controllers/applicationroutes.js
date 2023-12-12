@@ -45,7 +45,7 @@ router.get('/new-application', (req, res) => {
     // Send email to a series of email addresses
     const emailAddresses = ['john.gillooly@irr.com', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
-    const text = `A new Application has been submitted:
+    const htmlContent = `A new Application has been submitted:
     <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>\n
       <p>Your Name: ${newApplication.yourName}</p>
       <p>Social Security Number: ${newApplication.socialSecurityNumber}</p>
@@ -58,49 +58,49 @@ router.get('/new-application', (req, res) => {
       <p>Email: ${newApplication.email}</p>\n
       <p>Present Address: ${newApplication.presentAddress}</p>
       <p>City: ${newApplication.presCity}</p>
-      <p>Permanent Address: ${newApplication.permanentAddress}</p>
+      <p>Permanent Address: ${newApplication.permanentAddress}</p>\n
       <p>City: ${newApplication.permCity}</p>
-      <p>State: ${newApplication.permState}</p>
+      <p>State: ${newApplication.permState}</p>\n
       <p>ZIP: ${newApplication.permZip}</p>
       <p>Phone: ${newApplication.permPhone}</p>
-      <p>Parent/Guardian Name: ${newApplication.parentGuardianName}</p>
+      <p>Parent/Guardian Name: ${newApplication.parentGuardianName}</p>\n
       <p>Address: ${newApplication.parentAddress}</p>
       <p>City: ${newApplication.parentCity}</p>
-      <p>State: ${newApplication.parentState}</p>
+      <p>State: ${newApplication.parentState}</p>\n
       <p>ZIP: ${newApplication.parentZip}</p>
       <p>Phone: ${newApplication.parentPhone}</p>
-      <p>Previous Tenant: ${newApplication.previousTenant}</p>
+      <p>Previous Tenant: ${newApplication.previousTenant}</p>\n
       <p>Previous Rent Amount: ${newApplication.previousRentAmount}</p>
       <p>Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName}</p>
-      <p>City: ${newApplication.previousCity}</p>
+      <p>City: ${newApplication.previousCity}</p>\n
       <p>State: ${newApplication.previousState}</p>
       <p>ZIP: ${newApplication.previousZip}</p>
-      <p>Phone: ${newApplication.previousPhone}</p>
+      <p>Phone: ${newApplication.previousPhone}</p>\n
       <p>Source Of Funds: ${newApplication.sourceOfFunds}</p>
       <p>Employer Name: ${newApplication.employerName}</p>
-      <p>Source City: ${newApplication.sourceCity}</p>
+      <p>Source City: ${newApplication.sourceCity}</p>\n
       <p>Source State: ${newApplication.sourceState}</p>
       <p>Source ZIP: ${newApplication.sourceZip}</p>
-      <p>Source Phone: ${newApplication.sourcePhone}</p>
+      <p>Source Phone: ${newApplication.sourcePhone}</p>\n
       <p>Bank Name: ${newApplication.bankName}</p>
       <p>Bank City: ${newApplication.bankCity}</p>
-      <p>Bank State: ${newApplication.bankState}</p>
+      <p>Bank State: ${newApplication.bankState}</p>\n
       <p>Account Number: ${newApplication.accountNumber}</p>
       <p>Average Balance: ${newApplication.averageBalance}</p>
       <p>Credit Card Name: ${newApplication.creditCardName}</p>
-      <p>Credit Card Average Balance: ${newApplication.creditCardAverageBalance}</p>
+      <p>Credit Card Average Balance: ${newApplication.creditCardAverageBalance}</p>\n
       <p>Reference One
       Name: ${newApplication.referenceOneName}</p>
       <p>Relation: ${newApplication.referenceOneRelation}</p>
       <p>Years Known: ${newApplication.referenceOneYears}</p>
       <p>City: ${newApplication.referenceOneCity}</p>
-      <p>Phone: ${newApplication.referenceOnePhoneNumber}</p>
+      <p>Phone: ${newApplication.referenceOnePhoneNumber}</p>\n
       <p>Reference Two
       Name: ${newApplication.referenceTwoName}</p>
       <p>Relation: ${newApplication.referenceTwoRelation}</p>
       <p>Years Known: ${newApplication.referenceTwoYears}</p>
       <p>City: ${newApplication.referenceTwpCity}</p>
-      <p>Phone: ${newApplication.referenceTwpPhoneNumber}</p>
+      <p>Phone: ${newApplication.referenceTwpPhoneNumber}</p>\n
       <p>Reference Three
       Name: ${newApplication.referenceThreeName}</p>
       <p>Relation: ${newApplication.referenceThreeRelation}</p>
@@ -114,7 +114,7 @@ router.get('/new-application', (req, res) => {
         from: 'rpgillooly@gmail.com',
         to: emailAddress,
         subject: subject,
-        text: text,
+        html: htmlContent,
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
