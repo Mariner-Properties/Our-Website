@@ -46,12 +46,12 @@ router.get('/new-application', (req, res) => {
     const emailAddresses = ['john.gillooly@irr.com', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
     const text = `A new Application has been submitted:
-    <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>\n
-      <p>Your Name: ${newApplication.yourName}</p>
-      <p>Social Security Number: ${newApplication.socialSecurityNumber}</p>
-      <p>Birth Date: ${newApplication.birthDate}</p>\n
+    <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>
+      <p>Your Name: ${newApplication.yourName}
+      Social Security Number: ${newApplication.socialSecurityNumber}
+      Birth Date: ${newApplication.birthDate}</p>\n
       <p>Present Address ${newApplication.presentAddress}</p>
-      <p>City: ${newApplication.city}</p>
+      City: ${newApplication.city}</p>
       State ${newApplication.state}\n
       ZIP: ${newApplication.zip}
       Phone: ${newApplication.phone}
