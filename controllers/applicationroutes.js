@@ -46,10 +46,13 @@ router.get('/new-application', (req, res) => {
     const emailAddresses = ['', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
     const text = `A new Application has been submitted:
+    <h1>Property</h1>
     <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>
-      <p>Your Name: ${newApplication.yourName}
+    <h1>Their Info</h1>  
+    <p>Your Name: ${newApplication.yourName}
       Social Security Number: ${newApplication.socialSecurityNumber}
       Birth Date: ${newApplication.birthDate}</p>\n
+      <h1>Present Address</h1>
       <p>Present Address ${newApplication.presentAddress}
       City: ${newApplication.city}
       State ${newApplication.state}
@@ -57,17 +60,20 @@ router.get('/new-application', (req, res) => {
       Phone: ${newApplication.phone}
       Email: ${newApplication.email}
       City: ${newApplication.presCity}</p>\n
+      <h1>Permanent Address</h1>
       <p>Permanent Address: ${newApplication.permanentAddress}
       City: ${newApplication.permCity}
       State: ${newApplication.permState}\n
       ZIP: ${newApplication.permZip}
       Phone: ${newApplication.permPhone}</p>\n
+      <h1>Parent/Guardian Info</h1>
       <p>Parent/Guardian Name: ${newApplication.parentGuardianName}
       Address: ${newApplication.parentAddress}
       City: ${newApplication.parentCity}
       State: ${newApplication.parentState}
       ZIP: ${newApplication.parentZip}
       Phone: ${newApplication.parentPhone}</p>\n
+      <h1>Preivous Tenancy</h1>
       <p>Previous Tenant: ${newApplication.previousTenant}
       Previous Rent Amount: ${newApplication.previousRentAmount}
       Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName}
@@ -75,12 +81,14 @@ router.get('/new-application', (req, res) => {
       State: ${newApplication.previousState}
       ZIP: ${newApplication.previousZip}
       Phone: ${newApplication.previousPhone}</p>\n
+      <h1>Source of Funds</h1>
       <p>Source Of Funds: ${newApplication.sourceOfFunds}
       Employer Name: ${newApplication.employerName}
       Source City: ${newApplication.sourceCity}
       Source State: ${newApplication.sourceState}
       Source ZIP: ${newApplication.sourceZip}
       Source Phone: ${newApplication.sourcePhone}</p>\n
+      <h1>Credit Info</h1>
       <p>Bank Name: ${newApplication.bankName}
       Bank City: ${newApplication.bankCity}
       Bank State: ${newApplication.bankState}
@@ -88,6 +96,7 @@ router.get('/new-application', (req, res) => {
       Average Balance: ${newApplication.averageBalance}
       Credit Card Name: ${newApplication.creditCardName}
       Credit Card Average Balance: ${newApplication.creditCardAverageBalance}</p>\n
+      <h1>Personal References</h1>
       <p>Reference One
       Name: ${newApplication.referenceOneName}
       Relation: ${newApplication.referenceOneRelation}
