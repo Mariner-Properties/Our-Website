@@ -107,6 +107,8 @@ router.get('/new-application', (req, res) => {
       Years Known: ${newApplication.referenceThreeYears}
       City: ${newApplication.referenceThreeCity}
       Phone: ${newApplication.referenceThreePhoneNumber}
+      Signature: ${newApplication.signature}
+      Date: ${newApplication.date}
       `;
 
     for (const emailAddress of emailAddresses) {
