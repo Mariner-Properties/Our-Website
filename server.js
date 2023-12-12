@@ -7,7 +7,6 @@ const staticroutes = require('./controllers/staticroutes');
 const ticketroutes = require('./controllers/ticketroutes');
 const adminroutes = require('./controllers/adminroutes');
 const applicationroutes = require('./controllers/applicationroutes');
-const Ticket = require('./models/ticket');
 
 const app = express();
 

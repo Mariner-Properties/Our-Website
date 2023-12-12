@@ -1,10 +1,9 @@
-const Sequelize = require('sequelize');
-const ticketsDB = new Sequelize('tickets_db', 'nm4x7xm9burykoj3', 'sdajfdghkxhl1kmf', {
-  host: 'en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-  dialect: 'mysql',
-});
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../controllers/connection');
 
-const Ticket = sequelize.define('Ticket', {
+class Ticket extends Model {}
+
+Ticket.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -16,15 +15,17 @@ const Ticket = sequelize.define('Ticket', {
   dateNoticed: DataTypes.DATE,
   todaysDate: DataTypes.DATE,
 }, {
+  sequelize, // Pass the Sequelize instance here
   tableName: 'tickets',
 });
 
-ticketsDB.sync()
+sequelize.sync()
   .then(() => {
     console.log('tickets_db synchronized');
   })
   .catch((error) => {
     console.error('Error synchronizing tickets_db:', error);
   });
+
   
 module.exports = { Ticket };

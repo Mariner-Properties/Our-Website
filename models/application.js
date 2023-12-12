@@ -1,10 +1,9 @@
-const { Sequelize, DataTypes } = require('sequelize');
-const applicationsDB = new Sequelize('applications_db', 'nm4x7xm9burykoj3', 'sdajfdghkxhl1kmf', {
-    host: 'en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    dialect: 'mysql',
-  });
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../controllers/connection');
 
-const Application = sequelize.define('Application', {
+class Application extends Model {}
+
+Application.init({
   id: {
     type: DataTypes.INTEGER,
     primaryKey: true,
@@ -75,15 +74,16 @@ const Application = sequelize.define('Application', {
   },
 
 }, {
-  tableName: 'Applications',
-});
-
-applicationsDB.sync()
-  .then(() => {
-    console.log('applications_db synchronized');
-  })
-  .catch((error) => {
-    console.error('Error synchronizing applications_db:', error);
+    sequelize, // Pass the Sequelize instance here
+    tableName: 'applications',
   });
+  
+  sequelize.sync()
+    .then(() => {
+      console.log('tickets_db synchronized');
+    })
+    .catch((error) => {
+      console.error('Error synchronizing tickets_db:', error);
+    });
 
   module.exports = { Application };
