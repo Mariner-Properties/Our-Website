@@ -45,7 +45,7 @@ router.get('/new-application', (req, res) => {
     // Send email to a series of email addresses
     const emailAddresses = ['john.gillooly@irr.com', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
-    const htmlContent = `A new Application has been submitted:
+    const text = `A new Application has been submitted:
     <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>\n
       <p>Your Name: ${newApplication.yourName}</p>
       <p>Social Security Number: ${newApplication.socialSecurityNumber}</p>
@@ -114,7 +114,7 @@ router.get('/new-application', (req, res) => {
         from: 'rpgillooly@gmail.com',
         to: emailAddress,
         subject: subject,
-        html: htmlContent,
+        text: text,
       };
 
       transporter.sendMail(mailOptions, (error, info) => {
