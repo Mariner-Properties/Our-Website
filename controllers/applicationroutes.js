@@ -46,67 +46,67 @@ router.get('/new-application', (req, res) => {
     const emailAddresses = ['john.gillooly@irr.com', 'rpgillooly@gmail.com']; // Add your email addresses
     const subject = 'New Application Created On MarinerPropertiesRental.com!';
     const text = `A new Application has been submitted:
-    <p>Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}</p>\n
-      <p>Your Name: ${newApplication.yourName}</p>
-      <p>Social Security Number: ${newApplication.socialSecurityNumber}</p>
-      <p>Birth Date: ${newApplication.birthDate}</p>\n
-      <p>Present Address ${newApplication.presentAddress}</p>
-      <p>City: ${newApplication.city}</p>
-      <p>State ${newApplication.state}</p>\n
-      <p>ZIP: ${newApplication.zip}</p>
-      <p>Phone: ${newApplication.phone}</p>
-      <p>Email: ${newApplication.email}</p>\n
-      <p>Present Address: ${newApplication.presentAddress}</p>
-      <p>City: ${newApplication.presCity}</p>
-      <p>Permanent Address: ${newApplication.permanentAddress}</p>\n
-      <p>City: ${newApplication.permCity}</p>
-      <p>State: ${newApplication.permState}</p>\n
-      <p>ZIP: ${newApplication.permZip}</p>
-      <p>Phone: ${newApplication.permPhone}</p>
-      <p>Parent/Guardian Name: ${newApplication.parentGuardianName}</p>\n
-      <p>Address: ${newApplication.parentAddress}</p>
-      <p>City: ${newApplication.parentCity}</p>
-      <p>State: ${newApplication.parentState}</p>\n
-      <p>ZIP: ${newApplication.parentZip}</p>
-      <p>Phone: ${newApplication.parentPhone}</p>
-      <p>Previous Tenant: ${newApplication.previousTenant}</p>\n
-      <p>Previous Rent Amount: ${newApplication.previousRentAmount}</p>
-      <p>Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName}</p>
-      <p>City: ${newApplication.previousCity}</p>\n
-      <p>State: ${newApplication.previousState}</p>
-      <p>ZIP: ${newApplication.previousZip}</p>
-      <p>Phone: ${newApplication.previousPhone}</p>\n
-      <p>Source Of Funds: ${newApplication.sourceOfFunds}</p>
-      <p>Employer Name: ${newApplication.employerName}</p>
-      <p>Source City: ${newApplication.sourceCity}</p>\n
-      <p>Source State: ${newApplication.sourceState}</p>
-      <p>Source ZIP: ${newApplication.sourceZip}</p>
-      <p>Source Phone: ${newApplication.sourcePhone}</p>\n
-      <p>Bank Name: ${newApplication.bankName}</p>
-      <p>Bank City: ${newApplication.bankCity}</p>
-      <p>Bank State: ${newApplication.bankState}</p>\n
-      <p>Account Number: ${newApplication.accountNumber}</p>
-      <p>Average Balance: ${newApplication.averageBalance}</p>
-      <p>Credit Card Name: ${newApplication.creditCardName}</p>
-      <p>Credit Card Average Balance: ${newApplication.creditCardAverageBalance}</p>\n
-      <p>Reference One
-      Name: ${newApplication.referenceOneName}</p>
-      <p>Relation: ${newApplication.referenceOneRelation}</p>
-      <p>Years Known: ${newApplication.referenceOneYears}</p>
-      <p>City: ${newApplication.referenceOneCity}</p>
-      <p>Phone: ${newApplication.referenceOnePhoneNumber}</p>\n
-      <p>Reference Two
-      Name: ${newApplication.referenceTwoName}</p>
-      <p>Relation: ${newApplication.referenceTwoRelation}</p>
-      <p>Years Known: ${newApplication.referenceTwoYears}</p>
-      <p>City: ${newApplication.referenceTwpCity}</p>
-      <p>Phone: ${newApplication.referenceTwpPhoneNumber}</p>\n
-      <p>Reference Three
-      Name: ${newApplication.referenceThreeName}</p>
-      <p>Relation: ${newApplication.referenceThreeRelation}</p>
-      <p>Years Known: ${newApplication.referenceThreeYears}</p>
-      <p>City: ${newApplication.referenceThreeCity}</p>
-      <p>Phone: ${newApplication.referenceThreePhoneNumber}</p>
+    Address Of Property You Want to Rent: ${newApplication.addressOfPropertyYouWantToRent}\n
+      Your Name: ${newApplication.yourName}
+      Social Security Number: ${newApplication.socialSecurityNumber}
+      Birth Date: ${newApplication.birthDate}\n
+      Present Address ${newApplication.presentAddress}
+      City: ${newApplication.city}
+      State ${newApplication.state}\n
+      ZIP: ${newApplication.zip}
+      Phone: ${newApplication.phone}
+      Email: ${newApplication.email}\n
+      Present Address: ${newApplication.presentAddress}
+      City: ${newApplication.presCity}
+      Permanent Address: ${newApplication.permanentAddress}\n
+      City: ${newApplication.permCity}
+      State: ${newApplication.permState}\n
+      ZIP: ${newApplication.permZip}
+      Phone: ${newApplication.permPhone}
+      Parent/Guardian Name: ${newApplication.parentGuardianName}\n
+      Address: ${newApplication.parentAddress}
+      City: ${newApplication.parentCity}
+      State: ${newApplication.parentState}\n
+      ZIP: ${newApplication.parentZip}
+      Phone: ${newApplication.parentPhone}
+      Previous Tenant: ${newApplication.previousTenant}\n
+      Previous Rent Amount: ${newApplication.previousRentAmount}
+      Landlord/Preceptor's Name: ${newApplication.landlordPreceptorName}
+      City: ${newApplication.previousCity}\n
+      State: ${newApplication.previousState}
+      ZIP: ${newApplication.previousZip}
+      Phone: ${newApplication.previousPhone}\n
+      Source Of Funds: ${newApplication.sourceOfFunds}
+      Employer Name: ${newApplication.employerName}
+      Source City: ${newApplication.sourceCity}\n
+      Source State: ${newApplication.sourceState}
+      Source ZIP: ${newApplication.sourceZip}
+      Source Phone: ${newApplication.sourcePhone}\n
+      Bank Name: ${newApplication.bankName}
+      Bank City: ${newApplication.bankCity}
+      Bank State: ${newApplication.bankState}\n
+      Account Number: ${newApplication.accountNumber}
+      Average Balance: ${newApplication.averageBalance}
+      Credit Card Name: ${newApplication.creditCardName}
+      Credit Card Average Balance: ${newApplication.creditCardAverageBalance}\n
+      Reference One
+      Name: ${newApplication.referenceOneName}
+      Relation: ${newApplication.referenceOneRelation}
+      Years Known: ${newApplication.referenceOneYears}
+      City: ${newApplication.referenceOneCity}
+      Phone: ${newApplication.referenceOnePhoneNumber}\n
+      Reference Two
+      Name: ${newApplication.referenceTwoName}
+      Relation: ${newApplication.referenceTwoRelation}
+      Years Known: ${newApplication.referenceTwoYears}
+      City: ${newApplication.referenceTwpCity}
+      Phone: ${newApplication.referenceTwpPhoneNumber}\n
+      Reference Three
+      Name: ${newApplication.referenceThreeName}
+      Relation: ${newApplication.referenceThreeRelation}
+      Years Known: ${newApplication.referenceThreeYears}
+      City: ${newApplication.referenceThreeCity}
+      Phone: ${newApplication.referenceThreePhoneNumber}
       `;
 
     for (const emailAddress of emailAddresses) {
