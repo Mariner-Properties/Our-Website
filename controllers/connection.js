@@ -3,7 +3,10 @@
 require('dotenv').config();
 const Sequelize = require('sequelize');
 
-let sequelize;
+const sequelize = new Sequelize('database', 'username', 'password', {
+  host: 'en1ehf30yom7txe7.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+  dialect: 'mysql',
+});
 
 if (process.env.JAWSDB_URL) {
   // Use JawsDB configuration for production
