@@ -7,6 +7,14 @@ const { Sequelize, sequelize } = require('sequelize');
 const { sequelize2 } = require('./connection');
 const staticroutes = require('./staticroutes')
 
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'rpgillooly@gmail.com',
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
+
 router.get('/new-application', (req, res) => {
     res.render('newApplication');
   });
